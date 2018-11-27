@@ -1,5 +1,5 @@
 FROM ubuntu:16.04
-TAG Phil Hawthorne <me@philhawthorne.com>
+MAINTAINER Shane J <shane_pcs@yahoo.com>
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV LANG C.UTF-8
