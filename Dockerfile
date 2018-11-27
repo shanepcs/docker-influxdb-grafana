@@ -8,6 +8,7 @@ ENV LANG C.UTF-8
 ENV INFLUXDB_VERSION 1.7.1
 ENV GRAFANA_VERSION  latest
 ENV NODE_VERSION     10
+ENV CHRONOGRAF_VERSION 1.4.4.2
 
 # Database Defaults
 ENV INFLUXDB_GRAFANA_DB datasource
@@ -58,6 +59,10 @@ RUN wget https://dl.influxdata.com/influxdb/releases/influxdb_${INFLUXDB_VERSION
 RUN wget https://s3-us-west-2.amazonaws.com/grafana-releases/release/grafana_${GRAFANA_VERSION}_amd64.deb && \
     dpkg -i grafana_${GRAFANA_VERSION}_amd64.deb && rm grafana_${GRAFANA_VERSION}_amd64.deb
 
+# Install Chronograf
+RUN wget https://dl.influxdata.com/chronograf/releases/chronograf_${CHRONOGRAF_VERSION}_amd64.deb && \
+    dpkg -i chronograf_${CHRONOGRAF_VERSION}_amd64.deb && rm chronograf_${CHRONOGRAF_VERSION}_amd64.deb
+    
 # Cleanup
 RUN apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
