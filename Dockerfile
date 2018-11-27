@@ -5,7 +5,7 @@ ENV DEBIAN_FRONTEND noninteractive
 ENV LANG C.UTF-8
 
 # Default versions
-ENV INFLUXDB_VERSION 1.7.0
+ENV INFLUXDB_VERSION 1.7.1
 ENV GRAFANA_VERSION  latest
 
 # Database Defaults
@@ -36,7 +36,7 @@ RUN apt-get -y update && \
   openssh-server \
   supervisor \
   wget && \
- curl -sL https://deb.nodesource.com/setup_7.x | bash - && \
+ curl -sL https://deb.nodesource.com/setup_10.x | bash - && \
  apt-get install -y nodejs
 
 WORKDIR /root
