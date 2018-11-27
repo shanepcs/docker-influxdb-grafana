@@ -68,7 +68,7 @@ RUN apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # Configure Supervisord, SSH and base env
-#COPY supervisord/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+COPY supervisord/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 #COPY ssh/id_rsa .ssh/id_rsa
 COPY bash/profile .profile
 
