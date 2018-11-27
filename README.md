@@ -10,12 +10,13 @@ The main point of difference with this image is:
 
 The main purpose of this image is to be used to show data from a [Home Assistant](https://home-assistant.io) installation. For more information on how to do that, please see my website about how I use this container.
 
-| Description  | Value |
-|--------------|-------|
-| Docker Image | 2.0.0 |
-| Ubuntu       | 16.04 |
-| InfluxDB     | 1.2   |
-| Grafana      | 4.1.1 |
+| Description  | Value   |
+|--------------|---------|
+| Docker Image | 2.0.0   |
+| Ubuntu       | 18.04   |
+| InfluxDB     | 1.5.2   |
+| ChronoGraf   | 1.4.4.2 |
+| Grafana      | 5.1.0   |
 
 ## Quick Start
 
